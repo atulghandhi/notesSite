@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body { background-color: #363636 }
+
+h3 {color: red }
+
+#wrapper	{width:900px;	margin:10px auto; background-color:#fff; padding:	30px }
+
+#logo {float: left; margin: 10px; margin-top: 0; margin-bottom: 25px }
+
+#topnav			{clear:both;	text-align:center;	font-size:14px }
+
+#topnav ul		{padding:15px 0;	margin:0;	border-top:1px #000 dotted	}
+
+#topnav ul li	{display:inline; list-style-type:none; margin: 0 60px 0 0	}
+
+#topnav a:link		{font-weight:bold; text-decoration:none;	color:#000	}
+
+#topnav a:visited	{font-weight:bold; text-decoration:none;	color:#000	}
+
+#topnav a:hover		{font-weight:bold; text-decoration:none;	color: gray }
+
+#topnav a:focus		{font-weight:bold; text-decoration:none;	color: gray }
+
+#topnav	a:active	{font-weight:bold; text-decoration:none;	color:#000	}
+
+#date {font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif" ; float: left; font-size: 12px; border-color: gray; border-top: none; border-left: none; border-right: none;  border-width: thin }
+
+#title {font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif" }
+
+#entry1, #entry2, #entry3, #entry4, #entry5, #entry6 {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; border: double; border-color: gray; border-bottom: none; border-left: none; border-right: none }
+
+
+#entry {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; border: double; border: none }
+
+#main {border-color: gray; border: none }
+
+th {border: none }
+
+#submit, #clear {  border-style: solid ; border-color: gray; backface-visibility: visible; background-color: white }
+
+#footer			{clear:both; padding:10px 0; border-top:1px #000 dotted	}
+
+#footer p		{text-align:center; font-size:14px; font-weight:bold }
+
+#textplane{width: 450px; float: left }
+
+#namenode {border:#363636; border-bottom-width: thick;  border-radius: 10% }
+
+#namenodediv {width: 300px; align-content: center;}
+
+
+#modellingSystems {width: 900; float: left}
+
+h4 {color: darkslategrey}
+
+a:visited, a:focus  { text-decoration: none; color:darkslategrey }
+a:hover,   a:active { text-decoration: none; color:black }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
