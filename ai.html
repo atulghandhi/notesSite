@@ -1,92 +1,839 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-	<link href="style.css" rel="stylesheet" type="text/css" >
-	<link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
 
-	
-        
-<title>EECSnotes</title>
+
+    <title>EECSnotes</title>
+
+    <style type="text/css">
+        li {
+            list-style: none;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        span.foldopened {
+            color: white;
+            font-size: xx-small;
+            border-width: 1;
+            font-family: monospace;
+            padding: 0em 0.25em 0em 0.25em;
+            background: #e0e0e0;
+            VISIBILITY: visible;
+            cursor: pointer;
+        }
+
+        span.foldclosed {
+            color: #666666;
+            font-size: xx-small;
+            border-width: 1;
+            font-family: monospace;
+            padding: 0em 0.25em 0em 0.25em;
+            background: #e0e0e0;
+            VISIBILITY: hidden;
+            cursor: pointer;
+        }
+
+        span.foldspecial {
+            color: #666666;
+            font-size: xx-small;
+            border-style: none solid solid none;
+            border-color: #CCCCCC;
+            border-width: 1;
+            font-family: sans-serif;
+            padding: 0em 0.1em 0em 0.1em;
+            background: #e0e0e0;
+            cursor: pointer;
+        }
+
+        span.l {
+            color: red;
+            font-weight: bold;
+        }
+
+        a.mapnode:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.mapnode:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.mapnode:active {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.mapnode:hover {
+            text-decoration: none;
+            color: black;
+            background: #eeeee0;
+        }
+
+    </style>
+
+
 </head>
 
 <body>
-	<div id="wrapper">
-		<div id="logo">
-     		<img src="revision_logo_small.png" width="350">
-    	</div>
-    	
-    	<div id="topnav">
-    		<ul>
-				<li>
-     				<a href="home.html">
-     					Home
-     				</a>
-     			</li>
-      			<li>
-      				<a href="bdp.html">
-      					Big Data Processing
-      				</a>
-      			</li>
-      			<li>
-     				<a href="dm.html">
-     					Data Mining
-     				</a>
-     			</li>
-      			<li>
-      				<a href="cca.html">
-      					 CC & Algorithms
-      				</a>
-      			</li>
-      			<li>
-      				<a href="ai.html">
-      					AI
-      				</a>
-      			</li>
-      			<li>
-      				<a href="ds.html">
-      					Distributed Systems
-      				</a>
-      			</li>
-      			<li>
-      				<a href="se.html">
-      					SE
-      				</a>
-      			</li>
-    		</ul>
-    	</div>
-    	<div id="content-wrapper">
-    		<div id="content1">
-    			<h1>
-    				Artificial Intelligence
-    			</h1>
-    		</div>
-    		<table id="main" border="0" bordercolor="#6D6D6D" width="900px">
-				<tr>   
-   					<td id="entry1">
-   						<h4>Lecture 1:</h4>
-   						<p>This is the first lecture</p>
-   					</td>
-   				</tr>
-   				<tr>
-   					<td id="entry2">
-   						<h4>Lecture 2:</h4>
-   						<p>This is the second lecture</p>
-   					</td>
-   				</tr>
-   				<tr>
-   					<td id="entry3">
-   						<h4>Lecture 3:</h4>
-   						<p>This is the third lecture</p>
-   					</td>
-   				</tr>
-    		</table>
-    	</div>
-	<div id="footer">
-    		<p>
-			All  Rights  Reserved   &bull;   Queen Mary University of London, Mile End RD    &bull;   0208.001.4068
-		</p>
-  	</div>
-	</div>
+<div id="wrapper">
+    <div id="logo">
+        <img src="revision_logo_small.png" width="350">
+    </div>
+
+    <div id="topnav">
+        <ul>
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="bdp.html">
+                    Big Data Processing
+                </a>
+            </li>
+            <li>
+                <a href="dm.html">
+                    Data Mining
+                </a>
+            </li>
+            <li>
+                <a href="cca.html">
+                    CC & Algorithms
+                </a>
+            </li>
+            <li>
+                <a href="ai.html">
+                    AI
+                </a>
+            </li>
+            <li>
+                <a href="ds.html">
+                    Distributed Systems
+                </a>
+            </li>
+            <li>
+                <a href="se.html">
+                    SE
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="content-wrapper">
+        <div id="content1">
+            <h1>
+                Artificial Intelligence
+            </h1>
+        </div>
+        <table id="main" border="0" bordercolor="#6D6D6D" width="900px">
+            <tr>
+                <td id="entry1">
+                    <h4>Topics:</h4>
+                    <p>
+
+
+                        <script type="text/javascript">
+                            // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+                            // Mozilla 0.9.6.
+
+                            if (document.layers) {
+                                //Netscape 4 specific code
+                                pre = 'document.';
+                                post = '';
+                            }
+                            if (document.getElementById) {
+                                //Netscape 6 specific code
+                                pre = 'document.getElementById("';
+                                post = '").style';
+                            }
+                            if (document.all) {
+                                //IE4+ specific code
+                                pre = 'document.all.';
+                                post = '.style';
+                            }
+
+                            function layer_exists(layer) {
+                                try {
+                                    eval(pre + layer + post);
+                                    return true;
+                                }
+                                catch (error) {
+                                    return false;
+                                }
+                            }
+
+                            function show_layer(layer) {
+                                eval(pre + layer + post).position = 'relative';
+                                eval(pre + layer + post).visibility = 'visible';
+                            }
+
+                            function hide_layer(layer) {
+                                eval(pre + layer + post).visibility = 'hidden';
+                                eval(pre + layer + post).position = 'absolute';
+                            }
+
+                            function hide_folder(folder) {
+                                hide_folding_layer(folder)
+                                show_layer('show' + folder);
+
+                                scrollBy(0, 0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+                            }
+
+                            function show_folder(folder) {
+                                // Precondition: all subfolders are folded
+
+                                show_layer('hide' + folder);
+                                hide_layer('show' + folder);
+                                show_layer('fold' + folder);
+
+                                scrollBy(0, 0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+                                var i;
+                                for (i = 1; layer_exists('fold' + folder + '_' + i); ++i) {
+                                    show_layer('show' + folder + '_' + i);
+                                }
+                            }
+
+                            function show_folder_completely(folder) {
+                                // Precondition: all subfolders are folded
+
+                                show_layer('hide' + folder);
+                                hide_layer('show' + folder);
+                                show_layer('fold' + folder);
+
+                                scrollBy(0, 0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+                                var i;
+                                for (i = 1; layer_exists('fold' + folder + '_' + i); ++i) {
+                                    show_folder_completely(folder + '_' + i);
+                                }
+                            }
+
+
+                            function hide_folding_layer(folder) {
+                                var i;
+                                for (i = 1; layer_exists('fold' + folder + '_' + i); ++i) {
+                                    hide_folding_layer(folder + '_' + i);
+                                }
+
+                                hide_layer('hide' + folder);
+                                hide_layer('show' + folder);
+                                hide_layer('fold' + folder);
+
+                                scrollBy(0, 0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+                            }
+
+                            function fold_document() {
+                                var i;
+                                var folder = '1';
+                                for (i = 1; layer_exists('fold' + folder + '_' + i); ++i) {
+                                    hide_folder(folder + '_' + i);
+                                }
+                            }
+
+                            function unfold_document() {
+                                var i;
+                                var folder = '1';
+                                for (i = 1; layer_exists('fold' + folder + '_' + i); ++i) {
+                                    show_folder_completely(folder + '_' + i);
+                                }
+                            }
+
+                        </script>
+                        <SPAN class="foldspecial" onclick="fold_document()">All +</SPAN>
+                        <SPAN class="foldspecial" onclick="unfold_document()">All -</SPAN>
+                    <p><span style="font-size: 133%;font-family: SansSerif, sans-serif; "></span>
+                    <ul>
+                        <li>Background
+                            <ul>
+                                <li>What is AI
+                                    <ul>
+                                        <li>What is intelligence
+
+                                        </li>
+                                        <li>Testing for AI
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Types of AI
+                                    <ul>
+                                        <li>Weak vs strong AI
+
+                                        </li>
+                                        <li>Thinking vs acting
+
+                                        </li>
+                                        <li>Human vs rational behaviour
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Agents
+                            <ul>
+                                <li>What is an agent?
+
+                                </li>
+                                <li>Rational agents
+
+                                </li>
+                                <li>The PEAS model
+
+                                </li>
+                                <li>Architecture + program
+
+                                </li>
+                                <li>Types of agent
+                                    <ul>
+                                        <li>Reflex agents
+
+                                        </li>
+                                        <li>Agents with state
+
+                                        </li>
+                                        <li>Goal-based agents
+
+                                        </li>
+                                        <li>Utility-based agents
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Agent environments
+                                    <ul>
+                                        <li>Fully or partially observable
+
+                                        </li>
+                                        <li>Deterministic or stochastic
+
+                                        </li>
+                                        <li>Episodic or sequential
+
+                                        </li>
+                                        <li>Static or dynamic
+
+                                        </li>
+                                        <li>Discrete or continuous
+
+                                        </li>
+                                        <li>Single or multiple agent
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')"
+                                  style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened"
+                                                                            onClick="hide_folder('1_1')">-</span>
+                            Search
+                            <ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;">
+                                <li>Problem solving
+                                    <ul>
+                                        <li>Problem formulation
+                                            <ul>
+                                                <li>Initial state
+
+                                                </li>
+                                                <li>Actions
+
+                                                </li>
+                                                <li>Goals
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>Search
+                                            <ul>
+                                                <li>State space
+
+                                                </li>
+                                                <li>Action sequences
+
+                                                </li>
+                                                <li>Agenda-based search
+
+                                                </li>
+                                                <li>Node expansion
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>Execution
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Uninformed search
+                                    <ul>
+                                        <li>Depth-first
+
+                                        </li>
+                                        <li>Breadth-first
+
+                                        </li>
+                                        <li>Uniform-cost
+
+                                        </li>
+                                        <li>Iterative deepening
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Heuristic (informed) search
+                                    <ul>
+                                        <li>Greedy
+
+                                        </li>
+                                        <li>Algorithm A
+
+                                        </li>
+                                        <li>Algorithm A*
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Properties
+                                    <ul>
+                                        <li>Completeness
+
+                                        </li>
+                                        <li>Optimality
+
+                                        </li>
+                                        <li>Time and space costs
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Local search
+                            <ul>
+                                <li>Optimisation of state
+
+                                </li>
+                                <li>Characterisation of search spaces
+                                    <ul>
+                                        <li>Local optima
+
+                                        </li>
+                                        <li>Ridges, plateaux, foothills
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Hill-climbing (greedy)
+
+                                </li>
+                                <li>Extensions of hill-climbing
+
+                                </li>
+                                <li>Simulated annealing
+
+                                </li>
+                                <li>Local beam search
+
+                                </li>
+                                <li>Genetic algorithms
+                                    <ul>
+                                        <li>State representation
+
+                                        </li>
+                                        <li>Initial population
+
+                                        </li>
+                                        <li>Selection and fitness functions
+
+                                        </li>
+                                        <li>Crossover
+
+                                        </li>
+                                        <li>Mutation
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Adversarial search
+                            <ul>
+                                <li>Minimax
+
+                                </li>
+                                <li>Alpha-beta pruning
+
+                                </li>
+                                <li>Depth-limited search
+
+                                </li>
+                                <li>Heuristic evaluation
+
+                                </li>
+                                <li>Games with chance
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Decision trees
+                            <ul>
+                                <li>Classification
+                                    <ul>
+                                        <li>Classes
+
+                                        </li>
+                                        <li>Features (attributes)
+                                            <ul>
+                                                <li>Symbolic vs numeric
+
+                                                </li>
+                                                <li>Feature selection
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>Geometric view
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Information theory
+                                    <ul>
+                                        <li>Entropy
+
+                                        </li>
+                                        <li>Mutual information
+
+                                        </li>
+                                        <li>Application to feature selection
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>ID3 algorithm
+                                    <ul>
+                                        <li>Trees as classifiers
+
+                                        </li>
+                                        <li>Information gain
+
+                                        </li>
+                                        <li>Recursive splitting
+
+                                        </li>
+                                        <li>Overfitting and pruning
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Neural networks
+                            <ul>
+                                <li>Real neurons
+
+                                </li>
+                                <li>Perceptrons
+                                    <ul>
+                                        <li>Inputs
+
+                                        </li>
+                                        <li>Weights
+
+                                        </li>
+                                        <li>Activation functions
+
+                                        </li>
+                                        <li>Outputs
+
+                                        </li>
+                                        <li>Computation
+
+                                        </li>
+                                        <li>Learning
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Single-layer networks
+                                    <ul>
+                                        <li>Classification
+
+                                        </li>
+                                        <li>Linear separability
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Multi-layer feedforward networks
+                                    <ul>
+                                        <li>Backpropagation
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Training and overfitting
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Logic
+                            <ul>
+                                <li>Syntax and semantics
+
+                                </li>
+                                <li>Inference procedures
+
+                                </li>
+                                <li>Propositional calculus
+                                    <ul>
+                                        <li>Propositions
+
+                                        </li>
+                                        <li>Connectives
+
+                                        </li>
+                                        <li>Sentences
+
+                                        </li>
+                                        <li>Interpretations
+
+                                        </li>
+                                        <li>Proof with truth tables
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>First order predicate calculus
+                                    <ul>
+                                        <li>Constants
+
+                                        </li>
+                                        <li>Variables
+
+                                        </li>
+                                        <li>Predicates
+
+                                        </li>
+                                        <li>Functions
+
+                                        </li>
+                                        <li>Quantifiers
+
+                                        </li>
+                                        <li>Terms
+
+                                        </li>
+                                        <li>Sentences
+
+                                        </li>
+                                        <li>Domains
+
+                                        </li>
+                                        <li>Interpretations
+
+                                        </li>
+                                        <li><span id="show1_2" class="foldclosed" onClick="show_folder('1_2')"
+                                                  style="POSITION: absolute">+</span> <span id="hide1_2"
+                                                                                            class="foldopened"
+                                                                                            onClick="hide_folder('1_2')">-</span>
+                                            Inference
+                                            <ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;">
+                                                <li>Entailment
+
+                                                </li>
+                                                <li>Soundness and completeness
+
+                                                </li>
+                                                <li>Inference rules
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Inference via resolution
+                            <ul>
+                                <li>Unit resolution
+
+                                </li>
+                                <li>General resolution
+
+                                </li>
+                                <li>Proof by refutation
+
+                                </li>
+                                <li>Clausal form (CNF)
+
+                                </li>
+                                <li>Unification of terms
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Probabilistic reasoning
+                            <ul>
+                                <li>Prior probability
+                                    <ul>
+                                        <li>Frequentist interpretation
+
+                                        </li>
+                                        <li>Subjective interpretation
+
+                                        </li>
+                                        <li>Axioms
+
+                                        </li>
+                                        <li>Probability distributions
+                                            <ul>
+                                                <li>Joint distribution
+
+                                                </li>
+                                                <li>Marginal probability
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>Conditional (posterior) probability
+                                    <ul>
+                                        <li>Total probability (conditioning)
+
+                                        </li>
+                                        <li>Bayes' rule
+
+                                        </li>
+                                        <li>Normalisation
+
+                                        </li>
+                                        <li>Reasoning with probability
+
+                                        </li>
+                                        <li>Independence
+
+                                        </li>
+                                        <li>Bayesian belief networks
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <SCRIPT type="text/javascript">
+                        fold_document();
+                    </SCRIPT>
+                    </p>
+                </td>
+                <td id="entry2" valign="top">
+
+                    <h4>Lecture Slides:</h4>
+
+                    <a href="AISlides/L01-philosophy-pages-deleted.pdf" download>
+                        <p>Lecture 1: Philosophy</p>
+                    </a>
+                    <a href="AISlides/L02-agents-pages-deleted.pdf" download>
+                        <p>Lecture 2: Agents</p>
+                    </a>
+                    <a href="AISlides/deleted_L03-search.pdf" download>
+                        <p>Lecture 3: Search</p>
+                    </a>
+                    <a href="AISlides/deleted_L04-localSearch.pdf" download>
+                        <p>Lecture 4: Local search</p>
+                    </a>
+                    <a href="AISlides/deleted_L05-gameSearch.pdf" download>
+                        <p>Lecture 5: Game search</p>
+                    </a>
+                    <a href="AISlides/" download>
+                        <p>Lecture 6</p>
+                    </a>
+                    <a href="AISlides/" download>
+                        <p>Lecture 8</p>
+                    </a>
+                    <a href="AISlides/" download>
+                        <p>Lecture 9</p>
+                    </a>
+                    <a href="AISlides/" download>
+                        <p>Lecture 10</p>
+                    </a>
+
+
+                    <h4>Exam Papers:</h4>
+
+                    <a href="AISlides/Pastpapers/ai_2018.pdf" download>
+                        <p>2018 Exam</p>
+                    </a>
+                    <a href="AISlides/Pastpapers/AI-2015.pdf" download>
+                        <p>2015 Exam</p>
+                    </a>
+                    <a href="AISlides/Pastpapers/AI-2015-Solutions.pdf" download>
+                        <p>2015 Exam - Solutions</p>
+                    </a>
+                    <a href="AISlides/Pastpapers/AI-2014.pdf" download>
+                        <p>2014 Exam</p>
+                    </a>
+                    <a href="AISlides/Pastpapers/AI-2013-Solutions.pdf" download>
+                        <p>2013 Exam - Solutions</p>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer">
+        <p>
+            All Rights Reserved &bull; Queen Mary University of London, Mile End RD &bull; 0208.001.4068
+        </p>
+    </div>
+</div>
 </body>
 </html>

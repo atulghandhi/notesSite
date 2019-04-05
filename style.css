@@ -1,11 +1,30 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body { background-color: #363636 }
+body { background-color: #FAFAFA; }
 
 h3 {color: red }
 
-#wrapper	{width:900px;	margin:10px auto; background-color:#fff; padding:	30px }
+#wrapper{
+		width:900px;	
+		margin:10px auto; 
+		background-color:#fff;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 20px
+}
+
+#wrapper:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.box {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 20px
+}
+
+.box:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 
 #logo {float: left; margin: 10px; margin-top: 0; margin-bottom: 25px }
 
@@ -29,7 +48,14 @@ h3 {color: red }
 
 #title {font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif" }
 
-#entry1, #entry2, #entry3, #entry4, #entry5, #entry6 {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; border: double; border-color: gray; border-bottom: none; border-left: none; border-right: none }
+#entry1, #entry2, #entry3, #entry4, #entry5, #entry6, #entry7, #entry8, #entry9, #entry10, #entry11, #entry12 {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; 
+	border: double; 
+	border-color: gray; 
+	border-bottom: none; 
+	border-left: none; 
+	border-right: none
+}
 
 
 #entry {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; border: double; border: none }

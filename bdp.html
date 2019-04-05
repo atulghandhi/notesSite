@@ -1,630 +1,708 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-	<link href="style.css" rel="stylesheet" type="text/css" >
-	<link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
 
-	
-        
-<title>EECSnotes</title>
+
+    <title>EECSnotes</title>
 </head>
 
 <body>
-	<div id="wrapper">
-		<div id="logo">
-     		<img src="revision_logo_small.png" width="350">
-    	</div>
-    	
-    	<div id="topnav">
-    		<ul>
-				<li>
-     				<a href="home.html">
-     					Home
-     				</a>
-     			</li>
-      			<li>
-      				<a href="bdp.html">
-      					Big Data Processing
-      				</a>
-      			</li>
-      			<li>
-     				<a href="dm.html">
-     					Data Mining
-     				</a>
-     			</li>
-      			<li>
-      				<a href="cca.html">
-      					 CC & Algorithms
-      				</a>
-      			</li>
-      			<li>
-      				<a href="ai.html">
-      					AI
-      				</a>
-      			</li>
-      			<li>
-      				<a href="ds.html">
-      					Distributed Systems
-      				</a>
-      			</li>
-      			<li>
-      				<a href="se.html">
-      					SE
-      				</a>
-      			</li>
-    		</ul>
-    	</div>
-    	<div id="content-wrapper">
-    		<div id="content1">
-    			<h1>
-    				Big Data Processing
-    			</h1>
-    		</div>
-    		<div id="pagelinks">
-    			<a href="#lecture1"><h5>Lecture 1</h5></a>
-    			<a href="#lecture2"><h5>Lecture 2</h5></a>
-    			<a href="#lecture3"><h5>Lecture 3</h5></a>
-    		</div>
-    		<table id="main" border="0" bordercolor="#6D6D6D" width="900px">
-				<tr>   
-   					<td id="entry1">
-   						<a name="lecture1"></a>
-   						<h3>
-   							Lecture 1
-   						</h3>
-   						<p>
-							<h5>
-								Lecturer information
-							</h5>
-   							Lecturer : Felix Cuadrado, Ben Steer<br />
-   							Email : felix.cuadrado@qmul.ac.uk<br />
-   						</p>
-   					</td>
-   					<td id="entry2" >
-   						<p>
-							<h4>
-								<p>&nbsp;  </p>
-							</h4>
-   							<h5>
-   								Assessment information
-   							</h5>
-   							5 lab quizzes = 15% (3% each)<br />
-   							Coursework = 20% <br />
-   							Final exam = 65% <br />
-   						</p>
-   					</td>
-   				</tr>
-   				<tr>
-   					<td id="entry" colspan="2" >
-						<p>
-							<b>
-								An introduction to parallel programming
-							</b>
-  						</p>
-   						<p>
-   							
-   							Parallel Computing
-   							<ul >
-							  <li>
-								Using several processors in parallel<br />
-							  </li>
-							  <li>
-								Calculation is divided, tasks computed by processors in a network, or by different cores in the same machine <br /><br />
-							  </li>
-							</ul>
- 							
-  							Advantages
-   							<ul >
-							  <li>
-								Faster and cheaper than using one big processor<br />
-							  </li>
-							  <li>
-								Some problems may be too big to fit on one machine <br />
-							  </li>
-							  <li>
-								Some problems may be too long to solve on one processor <br />
-							  </li>
-							  <li>
-								And some, like Trump, can't be solved even then... <br /><br />
-							  </li>
-							</ul>
- 							
- 							Disadvantages
-   							<ul >
-							  <li>
-								Algorithms can be difficult to or impossible to divide into subtasks<br />
-							  </li>
-							  <li>
-								Coordination between subtasks can be difficult to implement as subtasks may need results from each other to continue <br />
-							  </li>
-							</ul>
- 							
- 							Real world uses
-   							<ul >
-							  <li>
-							  <b>
- 								Simulations:
-  							  </b>
-								Lightning hitting a plane, nuclear accidents etc. These things cannot be practically tested in real life<br />
-							  </li>
-							  <li>
-							  <b>
- 								Predictions:
-  							  </b>
-								Weather, stocks, Trumps next tweet etc.<br />
-							  </li>
-							  <li>
-							 	<b>
- 									Data Analysis:
-  							  	</b>
-								You're in Big Data Processing...you know what this is.<br /><br />
-								<ul>
-									<li>
-										Marketers analyse social media for trends.<br />
-									</li>
-									<li>
-										Search engines analyse webpages.<br />
-									</li>
-									<li>
-										LHC analyses particles several times the size of Trumps brain etc.<br />
-									</li>
-									<br /><br /><br /><br /><br /><br /><br /><br /><br />
-								</ul>
-							  </li>
-							</ul>
-						</p>
-   					</td>
-   				</tr>
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				<tr>
-   					<td colspan="2" id="entry2">
-   					<a name="lecture2"></a>
-   						<h3>
-   							Lecture 2
-					  </h3>
-   						<p>
-							<b>
-								An introduction to Map/Reduce<br /><br />
-							</b>
-   						</p>
-   						<p>
-							<b><i>What is map reduce?</i></b>
-							&nbsp;
-							Map Reduce is a kind of Italian soup made with fried mushrooms and....If you don't know what map/reduce is yet, go home and re-enrol in gender studies or something...or run for President of USA! <br />
-							<br /> 
+<div id="wrapper">
+    <div id="logo">
+        <img src="revision_logo_small.png" width="350">
+    </div>
 
-							<b><i>But....what is it?</i></b>
-							&nbsp;
-							*sigh...* Map reduce is a parallel programming implementation with a map phase, a shuffle phase, a reduce phase and an optional combiner phase (after map-phase, before shuffle & sort)
-							<br />
-							<br />
-							
-							<b><i>Thats a lot of phases, a little confused here.</i></b>
-							<br />
-							Very well... It goes like this: Mapper → Combiner (if applicable) → Partitioner → Shuffle & sort → Reducer
-						  <br />
-							
-					  <h4>Mapper</h4>
-					  <p>
-							  <ul>
-								  <li>
-									The input for a Map Reduce job is split into chunks (HDFS....later), which are divided among Mappers.<br /><br />
-								  </li>
-								  <li>
-									Each chunk is generally 128mb, making the ideal number of Mappers for a job equal to the same number of blocks the input consists of.<br /><br />
-								  </li>
-								  <li>
-									Each Mapper processes its input split on a row by row basis.<br /><br />
-								  </li>
-								  <li>
-									A Mapper takes in a row of data, transforms it as required by the task and outputs a key/value pair<br /><br />
-								  </li>
-								  <li>
-									The transformation includes selecting the data that is needed from the dataset (find features in input) and manipulating it so you get a key and its corresponding value (the Reducer contains the logic for any actual computation). <br /><br />
-								  </li>
-								  <li>
-									Data Locality Optimisation means Mappers will be assigned close in physical memory space to where the block(s) of data they are working on is. This will be covered further in lecture 3. <br /><br />
-								  </li>
-							  </ul>
-							</p>
-							
-					  <h4>Shuffle and sort</h4>
-							<p>
-		  			  <ul>
-								  <li>
-									This phase involves moving 'intermediate' values produced by Mappers to their respective Reducers<br /><br />
-								  </li>
-								  <li>
-									All output values of a given key <b>MUST</b> be assigned to the same Reducer. This is done by a partitioning algorithm (after Combiner, if there is one, but before shuffle)<br /><br />
-								  </li>
-								  <li>
-									Remember; hadoop is a java implementation of map/reduce by Yahoo. Map/Reduce itself is by out lord and savior Google in C++<br /><br />
-								  </li>
-		  			  </ul>
-							</p>
-							
-							<h4>Reducer</h4>
-							<p>
-		  			  <ul>
-								  <li>
-									A Reducers job is to take all the key/value pairs it recieves from all the Mappers and 'reduce' them into a smaller set of values<br /><br />
-								  </li>
-								  <li>
-									This varys depending on context. In the classic word-count example a Reducer adds the values (instance of a word) for each key (word) it recieves giving the total number of instances for each word.<br /><br />
-								  </li>
-								  <li>
-									If the task had been to go through an ecommerce dataset and 'count sales'; the Mapper would select the relavent data from the dataset and the reducer would do the counting.<br /><br />
-								  </li>
-		  			  </ul>
-							</p>
-							
-							<h4>Combiner</h4>
-					  		<p>
-					  			<ul>
-								  <li>
-									A Combiner is an optional semi-Reducer that does part of the 'reduction' before the actual Reduce phase. <br /><br />
-								  </li>
-								  <li>
-								  	The Combiner class is used in between the Map class and the Reduce class to reduce the volume of data transfer between Map and Reduce. Usually, the output of the map task is large and the data transferred to the reduce task is high. Combiners are not always implemented because they do not always work; it depends on the job.<br /><br />
-								  </li>
-								  <li>
-									Where Combiners are used, there is one for each Mapper and the logic they implement is identical to Reducers of that job.<br /><br />
-								  </li>
-								  <li>
-									The only difference is, a Reducer acts on the data of all Mapper outputs, whereas a Combiner acts on the output of a single Mapper. <br /><br />
-								  </li>
-								  <li>
-									Combiners have rules they have to follow. They must be...  <br />
-									<ul>
-										<li>
-											Idempotent: The number of times a combiner is applied should not change the output<br />
-										</li>
-										<li>
-											Transititive: The order of inputs cannot change the final output.<br />
-										</li>
-										<li>
-											Side effect free: Otherwise they wouldn't be idempotent.<br />
-										</li>
-										<li>
-											Preserve sort order: Cannot change the keys of Mapper output to affect sort order<br />
-										</li>
-										<li>
-											Preserve partitioning: Cannot change the keys of Mapper output to affect partitioning to the Reducers.<br />
-										</li>
-									</ul>
-								  </li>
-								  
-					  			</ul>
-							</p>
-							
-					  		<p>
-								<div align="center" id="mapreducediagram">
-								<br /><br /><br /><br />
-									<img src="mapreduce.jpg" alt="planes" width="700" height="270" style="align-content:stretch">
-									<br /><br /><br /><br /><br /><br /><br />
-								</div>
-							</p>
-							
-  						
-   						</p>
-   					</td>
-   				</tr>
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				<tr>
-   					<td colspan="2" id="entry3">
-   					<a name="lecture3"></a>
-   						<h3>
-   							Lecture 3
-					  </h3>
-   						<p>
-							<b>
-								Hadoop: Behind the scenes<br /><br />
-							</b>
-   						</p>
-   						<p>
-							<p>
-								Hadoop has much in common with the London underground system. Both are praised for their speed and service, yet neither would exist without slavery. Now we learn the ugly truth behind the pretty Map Reduce architecture, of <i>Demons</i> and <i>Slaves</i>.
-							</p>
-							<p>
-								<u>
-									Daemons
-								</u>
-								<ul>
-									<li>
-										Hadoop works on a cluster of PC's in a network, with each PC acting as a node.<br /><br />
-									</li>
-									<li>
-										Demons consume the souls of the unwary. Daemons, on the other hand, are a set of programs that run in the background of a machine with a set of specific tasks.<br /><br />
-									</li>
-									<li>
-										Map/Reduce computing daemons: NodeManager, JobHistoryServer and ResourceManager.<br /><br />
-									</li>
-									<li>
-										Map/Reduce storage daemons: NameNode, DataNode and SecondaryNameNode.<br /><br />
-									</li>
-								</ul>
-							</p>
-							<p>
-								<u>
-									Slavery: Master/worker architecture<br /><br />
-								</u>
-								
-									
-										Every hadoop network has 1 master node and many worker nodes
-									
-									<ul>
-										<li>
-											Master...<br /><br />
-											<ul>
-												<li>
-													Is aware of all worker nodes
-												</li>
-												<li>
-													Recieves job requests from outside the cluster (jobs are easier to manage with one node doing all the managing)
-												</li>
-												<li>
-													Decides which node executes what and when
-												</li>
-												<li>
-													Communicates with worker nodes<br /><br />
-												</li>
-											</ul>
-										</li>
-										<li>
-											Worker...<br /><br />
-											<ul>
-												<li>
-													Does as told by master<br /><br />
-												</li>
-											</ul>
-										</li>
-									</ul>
-								
-							</p>
-							<p>All that studying must be getting tiring, lets instead talk about some of my personal history. When I was younger I felt like a man trapped inside a womens body; but then I was born. After that it wasn't so bad being raised as an only child, though it really annoyed my brother. Probably a condom failure. I always thought Trojan was a bad name for a condom brand because of course, the Trojans were a people whose lives were ruined when a vessel containing little warriors unexpectedly exploded inside their city walls. On second thoughts it seems perfectly adequate. I’m sure wherever my Dad is he’s looking down on us. He’s not dead, just very condescending. Getting back to big data...<br /><br /></p>
-							
-							
-							
-							<p>
-								<ul>
-									<li>
-										As mentioned, before we got distracted, there is one ResourceManager (Master) for each cluster of nodes. <br /><br />
-									</li>
-									<li>
-										This can create a bottle neck as managing an entire clusters resources is a lot of work for a single node to be doing. The resource manager fixes this by assigning 'Deputy-Masters' called ApplicationManagers.
-									</li>
-								</ul>
-								
-								
-									<u>
-										A Resource Manager:
-									</u>
-									
-										<ul>
-											<li>
-												Recieves hadoop job requests from clients outside the cluster. <br /><br />
-											</li>
-											<li>
-												Creates ApplicationMasters.
-												<ul>
-													<li>
-														One ApplicationMaster is created per job to remove the bottleneck of overloading the ResourceManager.
-													</li>
-													<li>
-														ApplicationMaster manages the resources for each indivigual job and ensures its completion.
-													</li>
-													<li>
-														ResourceManager (Master) takes care of external requests and ensures NodeManager nodes (coming up next...) stay live.
-													</li>
-												</ul>
-											</li>
-										</ul>
-									
-										<u>
-											The NodeManager:
-										</u>
-										<ul>
-											<li>
-												There is one NodeManager for each worker node to make sure the tasks set by the ResourceManager for that node are completed.<br /><br />
-											</li>
-											<li>
-												This means there are many NodeManagers for each ResourceManager, just as there are many workers for each master.<br /><br />
-											</li>
-											<li>
-												The NodeManager also sends constant 'heartbeat' messages to the ResourceManager to let it know that the node is live.<br /><br />
-											</li>
-											<li>
-												A Resouce manager knows when a node is dead because the hearbeat messages stop, allowing it to make the required adjustments.<br /><br />
-											</li>
-										</ul>
-									
-										<u>
-											The Container:
-										</u>
-										<ul>
-											<li>
-												Worker Nodes are allocated to 'containers' (just like slaves)<br /><br />
-											</li>
-											<li>
-												ResourceManager then allocates containers to ApplicationMasters<br /><br />
-											</li>
-											<li>
-												ApplicationMasters manage the resources of the containers given to them, that is, they decide which nodes in a container do what for each Map/Reduce job.<br /><br />
-											</li>
-										</ul>	
-									
-									
-										
-										<u>
-											The ApplicationMaster:
-										</u>
-										<ul>
-											<li>
-												'Negotiates' resources for each job with ResourceManager.<br /><br />
-											</li>
-											<li>
-												Reports to ResourceManager about progress and completion of jobs.<br /><br />
-											</li>
-											<li>
-												Records the outcome of each job in the JobHistoryServer (remember that, we mentioned it earlier).<br /><br />
-											</li>
-											<li>
-												Is destroyed when a job is complete.<br /><br />
-											</li>
-										</ul>
-										
-										
-										<p>
-											<b>
-												Hadoop Distributed File System (HDFS)<br /><br />
-											</b>
-   										</p>
-   										<ul>
-   											<li>
-   												HDFS is a shared storage space for all the nodes in a cluster. Input and output of hadoop jobs live in HDFS.<br /><br />
-   											</li>
-   											<li>
-   												Files are stored in 128mb blocks, with one or more blocks assigned to each Mapper.<br /><br />
-   											</li>
-   											<li>
-   												The block system helps to quickly and easily distribute data to Mappers.<br /><br />
-   											</li>
-   											<li>
-   												As previously mentioned, data locality optimisation means Mappers are close in physical memory space to the block they're working on.<br /><br />
-   											</li>
-   										</ul>
-   										
-   										<u>
-											The DataNode:
-										</u>
-										<ul>
-											<li>
-												There is one or more per cluster<br /><br />
-											</li>
-											<li>
-												It stores blocks from HDFS and reports to the NameNode (coming up...) to update list of stored blocks.<br /><br />
-											</li>
-										</ul>
-										
-										<u>
-											The NameNode:
-										</u>
-										<ul>
-											<li>
-												There is one per cluster.<br /><br />
-											</li>
-											<li>
-												It keeps an index table with the location of each block of data<br /><br />
-											</li>
-											<li>
-												Thats all it does. Keeps track of blocks. NameNode doesn't compute or do anything else to help, the lazy bastard.<br /><br />
-											</li>
-											<li>
-												As well as being lazy, it is also a single point of failure; if the NameNode fails, all goes to shit. And thats why Hadoop 2.0 introduced...<br /><br />
-											</li>
-											<p>
-												<div id="namenodediv">
-													<img id="namenode" src="namenode.jpg" width="303" height="206" >
-												</div>
-											</p>
-										</ul>
-										
-										<u>
-											The Secondary NameNode:
-										</u>
-										<ul>
-											<li>
-												Its only job is to store a backup of NameNode's index tables.<br /><br />
-											</li>
-											<li>
-												It saves the day if the NameNode goes down. No more single point of failure<br /><br />
-											</li>
-										</ul>
-										
-										<u>
-											Block Replication:
-										</u>
-										<ul>
-											<li>
-												Blocks of data are replicated and written several times in HDFS. <br /><br />
-											</li>
-											<li>
-												The standard replication factor is 3.<br /><br />
-											</li>
-											<li>
-												Replica's of blocks are stored on different 'racks' and the NameNode stores the 'rack-id' of each DataNode.<br /><br />
-											</li>
-											<li>
-												This way, data is not lost if an entire rack goes down as other racks will contain the same blocks.<br /><br />
-											</li>
-											<li>
-												This makes reading data faster, as you can use the bandwidth of multiple racks. However, writing data to multiple racks is slower.<br /><br />
-											</li>
-											<li>
-												HDFS is not covered in much more detail than this in the lecture slides. But if you want a further understand of DataNodes communicating with each other, or racks or any of that stuff...just Google HDFS. Theres no point me copying and pasting a wiki article here.<br /><br />
-											</li>
-										</ul>
-							</p>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-					  
-							
-  						
-   						</p>
-   					</td>
-   				</tr>
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-   				
-    		</table>
-    	</div>
-	<div id="footer">
-    		<p>
-			All  Rights  Reserved   &bull;   Queen Mary University of London, Mile End RD    &bull;   0208.001.4068
-		</p>
-  	</div>
-	</div>
+    <div id="topnav">
+        <ul>
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="bdp.html">
+                    Big Data Processing
+                </a>
+            </li>
+            <li>
+                <a href="dm.html">
+                    Data Mining
+                </a>
+            </li>
+            <li>
+                <a href="cca.html">
+                    CC & Algorithms
+                </a>
+            </li>
+            <li>
+                <a href="ai.html">
+                    AI
+                </a>
+            </li>
+            <li>
+                <a href="ds.html">
+                    Distributed Systems
+                </a>
+            </li>
+            <li>
+                <a href="se.html">
+                    SE
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="content-wrapper">
+        <div id="content1">
+            <h1>
+                Big Data Processing
+            </h1>
+        </div>
+        <table id="main" border="0" bordercolor="#6D6D6D" width="900px">
+            <tr>
+                <td>
+                    <h4>Lecture slide summaries:</h4>
+                    <div id="pagelinks">
+                        <a href="#lecture1"><h5>Lecture 1</h5></a>
+                        <a href="#lecture2"><h5>Lecture 2</h5></a>
+                        <a href="#lecture3"><h5>Lecture 3</h5></a>
+                    </div>
+                </td>
+                <td valign="top">
+                    <h4>Exam Papers:</h4>
+
+                    <a href="bdp_pastPapers/BDP_2018.pdf" download>
+                        <h5>2018 Exam</h5>
+                    </a>
+                    <a href="bdp_pastPapers/BDP_may_2017.pdf" download>
+                        <h5>2017 Exam</h5>
+                    </a>
+                    <a href="bdp_pastPapers/BDP_may_2016.pdf" download>
+                        <h5>2016 Exam</h5>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td id="entry1">
+                    <a name="lecture1"></a>
+                    <h3>
+                        Lecture 1
+                    </h3>
+                    <p>
+                    <h5>
+                        Lecturer information
+                    </h5>
+                    Lecturer : Felix Cuadrado, Ben Steer<br/>
+                    Email : felix.cuadrado@qmul.ac.uk<br/><br/><br/>
+                    </p>
+                </td>
+                <td id="entry2">
+                    <p>
+                        <h4>
+                    <p>&nbsp; </p>
+                    </h4>
+                    <h5>
+                        Assessment information
+                    </h5>
+                    Final exam = 65% <br/>
+                    &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                    1st May 2019<br/>
+                    &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                    14:30 start<br/>
+                    &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                    Room FB326/FB340 Bancroft Building, Mile End<br/>
+
+                    </p>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td id="entry" colspan="2">
+                    <p>
+                        <b>
+                            An introduction to parallel programming
+                        </b>
+                    </p>
+                    <p>
+
+                        Parallel Computing
+                    <ul>
+                        <li>
+                            Using several processors in parallel<br/>
+                        </li>
+                        <li>
+                            Calculation is divided, tasks computed by processors in a network, or by different cores in
+                            the same machine <br/><br/>
+                        </li>
+                    </ul>
+
+                    Advantages
+                    <ul>
+                        <li>
+                            Faster and cheaper than using one big processor<br/>
+                        </li>
+                        <li>
+                            Some problems may be too big to fit on one machine <br/>
+                        </li>
+                        <li>
+                            Some problems may be too long to solve on one processor <br/>
+                        </li>
+                        <li>
+                            And some, like Trump, couldn't be solved even then... <br/><br/>
+                        </li>
+                    </ul>
+
+                    Disadvantages
+                    <ul>
+                        <li>
+                            Algorithms can be difficult or impossible to divide into subtasks<br/>
+                        </li>
+                        <li>
+                            Coordination between subtasks can be difficult to implement as subtasks may need results
+                            from each other to continue <br/>
+                        </li>
+                    </ul>
+
+                    Real world uses
+                    <ul>
+                        <li>
+                            <b>
+                                Simulations:
+                            </b>
+                            Lightning hitting a plane, nuclear accidents etc. These things cannot be practically tested
+                            in real life<br/>
+                        </li>
+                        <li>
+                            <b>
+                                Predictions:
+                            </b>
+                            Weather, stocks, Trumps next tweet etc.<br/>
+                        </li>
+                        <li>
+                            <b>
+                                Data Analysis:
+                            </b>
+                            You're in Big Data Processing...you know what this is.<br/><br/>
+                            <ul>
+                                <li>
+                                    Marketers analyse social media (twitter, FB) for trends.<br/>
+                                </li>
+                                <li>
+                                    Search engines analyse webpages.<br/>
+                                </li>
+                                <li>
+                                    LHC analyses particles several times the size of Trumps brain etc.<br/>
+                                </li>
+                                <br/><br/><br/><br/>
+                            </ul>
+                        </li>
+                    </ul>
+                    </p>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" id="entry3">
+                    <a name="lecture2"></a>
+                    <h3>
+                        Lecture 2
+                    </h3>
+                    <p>
+                        <b>
+                            An introduction to Map/Reduce<br/><br/>
+                        </b>
+                    </p>
+                    <p>
+                        <b><i>What is map reduce?</i></b>
+                        &nbsp;
+                        Map Reduce is a kind of Italian soup made with fried mushrooms and....If you don't know what
+                        map/reduce is yet, go home and re-enrol in gender studies or something...or run for President of
+                        USA! <br/>
+                        <br/>
+
+                        <b><i>But....what is it?</i></b>
+                        &nbsp;
+                        *sigh...* Map reduce is a parallel programming implementation with a map phase, a shuffle phase,
+                        a reduce phase and an optional combiner phase (after map-phase, before shuffle & sort)
+                        <br/>
+                        <br/>
+
+                        <b><i>Thats a lot of phases, a little confused here.</i></b>
+                        <br/>
+                        Very well... It goes like this: Mapper → Combiner (if applicable) → Partitioner → Shuffle & sort
+                        → Reducer
+                        <br/>
+
+                    <h4>Mapper</h4>
+                    <p>
+                    <ul>
+                        <li>
+                            The input for a Map Reduce job is split into chunks (HDFS....later), which are divided among
+                            Mappers.<br/><br/>
+                        </li>
+                        <li>
+                            Each chunk is generally 128mb, making the ideal number of Mappers for a job equal to the
+                            same number of blocks the input consists of.<br/><br/>
+                        </li>
+                        <li>
+                            Each Mapper processes its input split on a row by row basis.<br/><br/>
+                        </li>
+                        <li>
+                            A Mapper takes in a row of data, transforms it as required by the task and outputs a
+                            key/value pair<br/><br/>
+                        </li>
+                        <li>
+                            The transformation includes selecting the data that is needed from the dataset (finding
+                            'features' in the input) and manipulating it so you get a key and its corresponding value
+                            (the Reducer contains the logic for any actual computation). <br/><br/>
+                        </li>
+                        <li>
+                            Data Locality Optimisation means Mappers will be assigned close in physical memory space to
+                            where the block(s) of data they are working on are. This will be covered further in lecture
+                            3. <br/><br/>
+                        </li>
+                    </ul>
+                    </p>
+
+                    <h4>Shuffle and sort</h4>
+                    <p>
+                    <ul>
+                        <li>
+                            This phase involves moving 'intermediate' values produced by Mappers to their respective
+                            Reducers<br/><br/>
+                        </li>
+                        <li>
+                            All output values of a given key <b>MUST</b> be assigned to the same Reducer. This is done
+                            by a partitioning algorithm (after Combiner, if there is one, but before shuffle)<br/><br/>
+                        </li>
+                        <li>
+                            Remember; hadoop is a java implementation of map/reduce by Yahoo. Map/Reduce itself is by
+                            our lord and savior Google in C++<br/><br/>
+                        </li>
+                    </ul>
+                    </p>
+
+                    <h4>Reducer</h4>
+                    <p>
+                    <ul>
+                        <li>
+                            A Reducers job is to take all the key/value pairs it recieves from all the Mappers and
+                            'reduce' them into a smaller set of values<br/><br/>
+                        </li>
+                        <li>
+                            This varys depending on context. In the classic word-count example a Reducer adds the values
+                            (instance of a word) for each key (word) it recieves giving the total number of instances
+                            for each word.<br/><br/>
+                        </li>
+                        <li>
+                            If the task had been to go through an ecommerce dataset and 'count sales'; the Mapper would
+                            select the relavent data from the dataset and the reducer would do the counting.<br/><br/>
+                        </li>
+                    </ul>
+                    </p>
+
+                    <h4>Combiner</h4>
+                    <p>
+                    <ul>
+                        <li>
+                            A Combiner is an optional semi-Reducer that does part of the 'reduction' before the actual
+                            Reduce phase. <br/><br/>
+                        </li>
+                        <li>
+                            The Combiner class is used in between the Map class and the Reduce class to reduce the
+                            volume of data transfer between Map and Reduce. Usually, the output of the map task is large
+                            and the data transferred to the reduce task is high. Combiners are not always implemented
+                            because they do not always work; it depends on the job.<br/><br/>
+                        </li>
+                        <li>
+                            Where Combiners are used, there is one for each Mapper and the logic they implement is
+                            identical to Reducers of that job.<br/><br/>
+                        </li>
+                        <li>
+                            The only difference is, a Reducer acts on the data of all Mapper outputs, whereas a Combiner
+                            acts on the output of a single Mapper. <br/><br/>
+                        </li>
+                        <li>
+                            Combiners have rules they have to follow. They must be... <br/>
+                            <ul>
+                                <li>
+                                    Idempotent: The number of times a combiner is applied should not change the
+                                    output<br/>
+                                </li>
+                                <li>
+                                    Transititive: The order of the inputs cannot change the final output.<br/>
+                                </li>
+                                <li>
+                                    Side effect free: Otherwise they wouldn't be idempotent.<br/>
+                                </li>
+                                <li>
+                                    Preserve sort order: Cannot change the keys of Mapper output to affect sort
+                                    order<br/>
+                                </li>
+                                <li>
+                                    Preserve partitioning: Cannot change the keys of Mapper output to affect
+                                    partitioning to the Reducers.<br/>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    </p>
+
+                    <p>
+                    <div align="center" id="mapreducediagram">
+                        <br/><br/><br/><br/>
+                        <img src="mapreduce.jpg" alt="planes" width="700" height="270" style="align-content:stretch">
+                        <br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    </p>
+                    </p>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" id="entry4">
+                    <a name="lecture3">
+                    </a>
+                    <h3>
+                        Lecture 3
+                    </h3>
+                    <p>
+                        <b>
+                            Hadoop: Behind the scenes<br/><br/>
+                        </b>
+                    </p>
+                    <p>
+                    <p>
+                        Hadoop has much in common with the London underground system. Both are praised for their speed
+                        and service, yet neither would exist without slavery. Now we learn the ugly truth behind the
+                        pretty Map Reduce architecture, of <i>Demons</i> and <i>Slaves</i>.
+                    </p>
+                    <p>
+                        <u>
+                            Daemons
+                        </u>
+                    <ul>
+                        <li>
+                            Hadoop works on a cluster of PC's in a network, with each PC acting as a node.<br/><br/>
+                        </li>
+                        <li>
+                            Demons consume the souls of the unwary. Daemons, on the other hand, are a set of programs
+                            that run in the background of a machine with a set of specific tasks.<br/><br/>
+                        </li>
+                        <li>
+                            Map/Reduce computing daemons: NodeManager, JobHistoryServer and ResourceManager.<br/><br/>
+                        </li>
+                        <li>
+                            Map/Reduce storage daemons: NameNode, DataNode and SecondaryNameNode.<br/><br/>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <u>
+                            Slavery: Master/worker architecture<br/><br/>
+                        </u>
+
+                        Every hadoop network has 1 master node and many worker nodes
+
+                    <ul>
+                        <li>
+                            Master...<br/><br/>
+                            <ul>
+                                <li>
+                                    Is aware of all worker nodes
+                                </li>
+                                <li>
+                                    Recieves job requests from outside the cluster (jobs are easier to manage with one
+                                    node doing all the managing)
+                                </li>
+                                <li>
+                                    Decides which node executes what and when
+                                </li>
+                                <li>
+                                    Communicates with worker nodes<br/><br/>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Worker...<br/><br/>
+                            <ul>
+                                <li>
+                                    Does as told by master<br/><br/>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    </p>
+
+                    <p>
+                        All that studying must be getting tiring, lets instead talk about some of my personal history.
+                        When I was younger I felt like a man trapped inside a womens body; but then I was born. After
+                        that it wasn't so bad being raised as an only child, though it really annoyed my brother.
+                        Probably
+                        a condom failure. I always thought Trojan was a bad name for a condom brand because of course,
+                        the
+                        Trojans were a people whose lives were ruined when a vessel containing little warriors
+                        unexpectedly
+                        exploded inside their city walls. On second thoughts it seems perfectly adequate. I’m sure
+                        wherever
+                        my Dad is he’s looking down on us. He’s not dead, just very condescending. Getting back to big
+                        data...<br/><br/>
+                    </p>
+
+                    <p>
+                    <ul>
+                        <li>
+                            As mentioned, before we got distracted, there is one ResourceManager (Master) for each
+                            cluster of nodes. <br/><br/>
+                        </li>
+                        <li>
+                            This can create a bottle neck as managing an entire clusters resources is a lot of work for
+                            a single node to be doing. The resource manager fixes this by assigning 'Deputy-Masters'
+                            called ApplicationManagers.
+                        </li>
+                    </ul>
+                    <u>
+                        A Resource Manager:
+                    </u>
+                    <ul>
+                        <li>
+                            Recieves hadoop job requests from clients outside the cluster. <br/><br/>
+                        </li>
+                        <li>
+                            Creates ApplicationMasters.
+                            <ul>
+                                <li>
+                                    One ApplicationMaster is created per job to remove the bottleneck of overloading the
+                                    ResourceManager.
+                                </li>
+                                <li>
+                                    ApplicationMaster manages the resources for each indivigual job and ensures its
+                                    completion.
+                                </li>
+                                <li>
+                                    ResourceManager (Master) takes care of external requests and ensures NodeManager
+                                    nodes (coming up next...) stay live.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <u>
+                        The NodeManager:
+                    </u>
+                    <ul>
+                        <li>
+                            There is one NodeManager for each worker node to make sure the tasks set by the
+                            ResourceManager for that node are completed.<br/><br/>
+                        </li>
+                        <li>
+                            This means there are many NodeManagers for each ResourceManager, just as there are many
+                            workers for each master.<br/><br/>
+                        </li>
+                        <li>
+                            The NodeManager also sends constant 'heartbeat' messages to the ResourceManager to let it
+                            know that the node is live.<br/><br/>
+                        </li>
+                        <li>
+                            A Resouce manager knows when a node is dead because the hearbeat messages stop, allowing it
+                            to make the required adjustments.<br/><br/>
+                        </li>
+                    </ul>
+                    <u>
+                        The Container:
+                    </u>
+                    <ul>
+                        <li>
+                            Worker Nodes are allocated to 'containers' (just like slaves)<br/><br/>
+                        </li>
+                        <li>
+                            ResourceManager then allocates containers to ApplicationMasters<br/><br/>
+                        </li>
+                        <li>
+                            ApplicationMasters manage the resources of the containers given to them, that is, they
+                            decide which nodes in a container do what for each Map/Reduce job.<br/><br/>
+                        </li>
+                    </ul>
+                    <u>
+                        The ApplicationMaster:
+                    </u>
+                    <ul>
+                        <li>
+                            'Negotiates' resources for each job with ResourceManager.<br/><br/>
+                        </li>
+                        <li>
+                            Reports to ResourceManager about progress and completion of jobs.<br/><br/>
+                        </li>
+                        <li>
+                            Records the outcome of each job in the JobHistoryServer (remember that, we mentioned it
+                            earlier).<br/><br/>
+                        </li>
+                        <li>
+                            Is destroyed when a job is complete.<br/><br/>
+                        </li>
+                    </ul>
+                    <p>
+                        <b>
+                            Hadoop Distributed File System (HDFS)<br/><br/>
+                        </b>
+                    </p>
+                    <ul>
+                        <li>
+                            HDFS is a shared storage space for all the nodes in a cluster. Input and output of hadoop
+                            jobs live in HDFS.<br/><br/>
+                        </li>
+                        <li>
+                            Files are stored in 128mb blocks, with one or more blocks assigned to each Mapper.<br/><br/>
+                        </li>
+                        <li>
+                            The block system helps to quickly and easily distribute data to Mappers.<br/><br/>
+                        </li>
+                        <li>
+                            As previously mentioned, data locality optimisation means Mappers are close in physical
+                            memory space to the block they're working on.<br/><br/>
+                        </li>
+                    </ul>
+                    <u>
+                        The DataNode:
+                    </u>
+                    <ul>
+                        <li>
+                            There is one or more per cluster<br/><br/>
+                        </li>
+                        <li>
+                            It stores blocks from HDFS and reports to the NameNode (coming up...) to update list of
+                            stored blocks.<br/><br/>
+                        </li>
+                    </ul>
+
+                    <u>
+                        The NameNode:
+                    </u>
+                    <ul>
+                        <li>
+                            There is one per cluster.<br/><br/>
+                        </li>
+                        <li>
+                            It keeps an index table with the location of each block of data<br/><br/>
+                        </li>
+                        <li>
+                            Thats all it does. Keeps track of blocks. NameNode doesn't compute or do anything else to
+                            help, the lazy bastard.<br/><br/>
+                        </li>
+                        <li>
+                            As well as being lazy, it is also a single point of failure; if the NameNode fails, all goes
+                            to shit. And thats why Hadoop 2.0 introduced...<br/><br/>
+                        </li>
+                        <p>
+                        <div id="namenodediv">
+                            <img id="namenode" src="namenode.jpg" width="303" height="206">
+                        </div>
+                        </p>
+                    </ul>
+                    <u>
+                        The Secondary NameNode:
+                    </u>
+                    <ul>
+                        <li>
+                            Its only job is to store a backup of NameNode's index tables.<br/><br/>
+                        </li>
+                        <li>
+                            It saves the day if the NameNode goes down. No more single point of failure<br/><br/>
+                        </li>
+                    </ul>
+
+                    <u>
+                        Block Replication:
+                    </u>
+                    <ul>
+                        <li>
+                            Blocks of data are replicated and written several times in HDFS. <br/><br/>
+                        </li>
+                        <li>
+                            The standard replication factor is 3.<br/><br/>
+                        </li>
+                        <li>
+                            Replica's of blocks are stored on different 'racks' and the NameNode stores the 'rack-id' of
+                            each DataNode.<br/><br/>
+                        </li>
+                        <li>
+                            This way, data is not lost if an entire rack goes down as other racks will contain the same
+                            blocks.<br/><br/>
+                        </li>
+                        <li>
+                            This makes reading data faster, as you can use the bandwidth of multiple racks. However,
+                            writing data to multiple racks is slower.<br/><br/>
+                        </li>
+                        <li>
+                            HDFS is not covered in much more detail than this in the lecture slides. But if you want a
+                            further understand of DataNodes communicating with each other, or racks or any of that
+                            stuff...just Google HDFS. Theres no point me copying and pasting a wiki article
+                            here.<br/><br/>
+                        </li>
+                    </ul>
+                    </p>
+
+                    <div>
+                        <p>
+                            <b>
+                                Map Reduce programming patterns<br/><br/>
+                            </b>
+                        </p>
+                        <u>
+                            Inverted Index
+                        </u>
+
+                        <ul>
+                            <li>
+                                An index is a list of all unique words in a document along with a list, for each word, of the location (page number, section etc.) where it was used. <br/><br/>
+                            </li>
+                            <li>
+                                An inverted index is...you guessed it; the inverse of an index. For example, your phone contacts can be considered an index so when you view your
+                                contacts list you are viewing names which can be used to find their corresponding numbers. An inverse index in this example would be the opposite,
+                                so when you call someone and type the number manually and their names comes up - thats an 'inverted' index. Instead of using names to find a number
+                                you use the number to find the name.<br/><br/>
+                            </li>
+                            <li>
+                                What we want is a list of words, which link to a list of page numbers in our document where those words appear. Something like this:<br/><br/>
+                            </li>
+                            <li style="list-style-type:none">
+                                <div id="indexdiv" align="center">
+                                    <img id="inverted_index" src="iindex.png" width="462" height="359"><br/><br/>
+                                </div>
+                            </li>
+                            <li>
+                                The mapper in this case would be outputting each instance of each word as a <i>'key'</i>, and pairing each <i>key</i> with a <i>value</i> of the document
+                                (or page number or section) it appeared in.<br/><br/>
+                            </li>
+                            <li>
+                                The reducer then 'reduces' the mapper's output by combining all the different documents each word appears in - giving you a list of words along with each document they appear in.<br/><br/>
+                            </li>
+                        </ul>
+
+
+
+
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+    </div>
+    <div id="footer">
+        <p>
+            All Rights Reserved &bull; Queen Mary University of London, Mile End RD &bull; 0208.001.4068
+        </p>
+    </div>
+</div>
 </body>
 </html>
